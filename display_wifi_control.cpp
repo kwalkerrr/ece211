@@ -10,12 +10,9 @@
 #include "config.h"
 #include "display_wifi_control.h"
 
-//#define TFT_CS 10
-#define TFT_CS 33
-//#define TFT_DC 9
-#define TFT_DC 27
-//#define TFT_RST 8
-#define TFT_RST 32
+#define TFT_CS 10
+#define TFT_DC 9
+#define TFT_RST 8
 
 static Adafruit_GC9A01A tft(TFT_CS, TFT_DC, TFT_RST);
 
