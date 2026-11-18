@@ -46,7 +46,7 @@ static void update_condition_leds(condition_t condition) {
       break;
     case RAIN:
       neopixel_clear_all();
-      neopixel_light(LIGHT_BLUE, 0, NEOPIXEL_COUNT);
+      neopixel_light(DARK_BLUE, 0, NEOPIXEL_COUNT);
       break;
     case FREEZING_RAIN:
       neopixel_clear_all();

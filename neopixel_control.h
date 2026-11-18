@@ -7,6 +7,7 @@
 enum color_t {
   OFF,
   YELLOW,
+  DARK_BLUE,
   LIGHT_BLUE,
   WHITE,
   GRAY

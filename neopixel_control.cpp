@@ -41,14 +41,17 @@ void neopixel_light(color_t color, uint8_t first_led, uint8_t count) {
     case YELLOW:
       strip.fill(strip.Color(255, 125, 0, 10), first_led, count);
       break;
+    case DARK_BLUE:
+      strip.fill(strip.Color(0, 0, 255, 0), first_led, count);
+      break;
     case LIGHT_BLUE:
-      strip.fill(strip.Color(25, 50, 230, 10), first_led, count);
+      strip.fill(strip.Color(25, 50, 230, 20), first_led, count);
       break;
     case WHITE:
       strip.fill(strip.Color(0, 0, 0, 255), first_led, count);
       break;
     case GRAY:
-      strip.fill(strip.Color(13, 13, 13, 20), first_led, count);
+      strip.fill(strip.Color(13, 13, 13, 8), first_led, count);
       break;
   }
   strip.show();
