@@ -11,12 +11,6 @@ ece211_practicum.ino. A template is provided below.
 ```cpp
 #pragma once
 
-#include <AdafruitIO_WiFi.h>
-
-#define IO_USERNAME "adafruitiousername"
-#define IO_KEY "adafruitiokey"
-#define WIFI_SSID "wifiname"
-#define WIFI_PASS "wifipassword"
-
-AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+#define WIFI_SSID "wifissid"
+#define WIFI_PASSWORD "wifipassword"
 ```

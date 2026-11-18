@@ -2,10 +2,13 @@
 
 #include <stdint.h>
 
+#define NEOPIXEL_COUNT 12
+
 enum color_t {
   OFF,
   YELLOW,
   LIGHT_BLUE,
+  WHITE,
   GRAY
 };
 
@@ -13,7 +16,7 @@ enum color_t {
 Initializes the NeoPixel LEDs. This function should only
 be called once.
 */
-void neopixel_begin();
+void neopixel_init();
 
 /*
 Sets the RGBW bits for all of the LEDs in the strip to 0,

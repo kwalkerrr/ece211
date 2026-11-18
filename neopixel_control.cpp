@@ -1,18 +1,17 @@
-#include "neopixel_control.h"
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 #include <stdint.h>
+#include "neopixel_control.h"
 
 #define NEOPIXEL_PIN 23
-#define NEOPIXEL_COUNT 12
 #define NEOPIXEL_BRIGHTNESS 50
 
 static Adafruit_NeoPixel strip(NEOPIXEL_COUNT, NEOPIXEL_PIN, NEO_GRBW + NEO_KHZ800);
 
-void neopixel_begin() {
+void neopixel_init() {
   static bool called = false;
   if (called) {
-    Serial.println("neopixel_begin: function cannot be called more than once");
+    Serial.println("neopixel_init: function cannot be called more than once");
     return;
   }
   strip.begin();
@@ -44,6 +43,9 @@ void neopixel_light(color_t color, uint8_t first_led, uint8_t count) {
       break;
     case LIGHT_BLUE:
       strip.fill(strip.Color(25, 50, 230, 10), first_led, count);
+      break;
+    case WHITE:
+      strip.fill(strip.Color(0, 0, 0, 255), first_led, count);
       break;
     case GRAY:
       strip.fill(strip.Color(13, 13, 13, 20), first_led, count);
